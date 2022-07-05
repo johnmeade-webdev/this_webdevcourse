@@ -1,35 +1,56 @@
 # HTML
 
-**Hyper Text Markup Language** _(HTML)_ is one of the three trinity languages; the other two being Cascading Style Sheets _(CSS)_ and JavaScript. HTML's primary objective is to communicate the hierarchy of, and relationships between, information contained within a document.
+## 1. What Is It
 
-HTML is composed of elements created by predefined tags `<tag-name></tag-name>`. Tags are contained within angle-brackets, and further defined through the inclusion of tag attributes. Attributes alter the display or functionality of the element, and help identify it individually and/or as part of a group. As an example, let's look at one of the most commonly used elements:
+**Hyper Text Markup Language** _(HTML)_ is one of the three trinity languages of the web; the other two being Cascading Style Sheets _(CSS)_ and JavaScript. HTML's primary objective is to communicate the hierarchy of, and relationships between, information contained within a document. 
 
-_**Example 1**_
+In print publications we are used to interpreting structure based on visual cues given by the publisher. A larger, bold font may indicate a heading. Paragraphs may be broken up with newline spaces. A quotation may be taken out of the flow of the article and put in a pull quote for emphasis. Information may be organized in graphics, lists, or tables. 
+
+In digital publications we want to do all the things we can do in print, but in a way that is readable by both machines and humans. Headings are put within a heading element; lists within a list element; tables within a table element, etc.
+
+Elements are defined by tags and attributes. Most elements have an opening and closing tag, `<tag-name></tag-name>`. Attributes are assigned in the opening tag. Text the user will read is assigned between the opening and closing tag. Let's take a look at an example element.
+
 <hr>
+
+_**Example 1.1**_
+
 
 >**Code**
 >```html
-><div id="example-div-1" class="example-divs" draggable="true" style="border:1px solid blue;">
->    This is example div #1
-></div>
+><h1>This is the top-level document heading</h1>
 >```
 
 >**Rendered Output**
 > 
->![Rendered example div #1](./assets/1_What_Is_It/example_1.png)
-
-The element in _Example 1_ delineates a **div**ision within the content of a document. The element is defined by typing the opening and closing tags, `<div></div>`. Visual content is entered between the tags, `<div>This is example div #1</div>`. 
-
-We have included an `id=""` attribute to give the element a unique way to be identified among other elements in the document, `id="example-div-1"`. No other elements in the document can share the same id. 
-
-Next, we've added a `class=""` attribute which can be used to group elements together either for later manipulation or for styling purposes, `class="example-divs"`.
-
-The `draggable="true"` attribute tells the browser that the element can be dragged around the page; thus altering the functionality of the element.
-
-Lastly, we've included a `style=""` attribute to ask the browser to modify the visual display of the element. In this case, we've specifically defined that the element should have a solid blue border which is 1 pixel(_px_) in width.
-
-We will learn a lot more about tag attributes in the following chapters.
+>![Rendered example div #1](./assets/1_What_Is_It/example_1_1.png)
 
 <hr>
 
-The `<div>` is just one element out of over 100 possible HTML elements. Each element type, when used correctly, structures content in a way that is accessible and logical to machines (browsers, etc.) and humans (screens, screen-readers, etc.). For an exhaustive list of HTML elements you can check out the [HTML Elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) on Mozilla Developer Network (*MDN*). While you're there, bookmark the main MDN page. You'll visit it often.
+The `<h1>` tag creates a heading element that includes the most important organizational text of a document. In print publications, the `<h1>` would be the article title. We can see in the rendered output that the browser is interpreting the text as extremely important; therefore giving it a large font-size and a heavy font-weight.
+
+Now let's add in some regular text using the `<p>` tag, or paragraph tag.
+
+<hr>
+
+_**Example 1.2**_
+
+
+>**Code**
+>```html
+><h1>This is the top-level document heading</h1>
+><p>This is some regular text, perhaps the start of an article<p>
+>```
+
+>**Rendered Output**
+>
+>![Rendered example div #1](./assets/1_What_Is_It/example_1_2.png)
+
+<hr>
+
+The browser is now interpreting the document contents in a logical way. It has taken our `<p>` tag contents and made it a small font-size with regular weighting. 
+
+Let's take this one step further. Let's say this is an article on a page. We can place the `<h1>` and `<p>` tag within an `<article>` tag. The rendered output will be the same as in Example 1.2, but the machine will now know what a sighted user already knows: this text is grouped together, the heading relates to the text below it.
+
+The advantages to a user's browser understanding the conceptual structure are two-fold. First, a user doesn't need to actually see the page to understand it. Screen readers and other assistive technology will know how to present the material to a user appropriately. Second, browsers can make basic assumptions about the intention of the document structure: A `<form>` element can group inputs; a `<button>` can have an action associated with it and be enabled or disabled, a `<video>` element will automatically have an entire suite of browser-built video controls; and the list goes on. 
+
+Now that we understand what HTML is, let's find out how to write it using all the elements that make up a basic document.
