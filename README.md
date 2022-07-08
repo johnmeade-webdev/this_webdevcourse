@@ -4,7 +4,6 @@ The web development course is a straightforward walk through the trinity languag
 
 There are four modules: HTML, CSS, JavaScript as a Language, JavaScript in the Browser.
 
-MODULE 1  - HTML
-
-[Chapter 1 - What Is It](https://github.com/johnmeade-webdev/this_webdevcourse/blob/main/html/1_What_Is_It.md)
+## MODULE 1  - HTML
+> [Chapter 1 - What Is It](https://github.com/johnmeade-webdev/this_webdevcourse/blob/main/html/1_What_Is_It.md)<br>
 [Chapter 2 - HTML Documents](https://github.com/johnmeade-webdev/this_webdevcourse/blob/main/html/2_HTML_Documents.md)
